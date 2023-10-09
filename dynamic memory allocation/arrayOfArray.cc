@@ -4,22 +4,22 @@ using namespace std;
 
 void createArray(int **&array, int *cols, int *rows)
 {
-    int i;
 
     cout << "Enter the number of columns: ";
     cin >> *cols;
+
     cout << "Enter the numbers of rows: ";
     cin >> *rows;
 
     array = new int *[*rows];
 
-    for (i = 0; i < *rows; i++)
+    for (int i = 0; i < *rows; i++)
     {
         array[i] = new int[*cols];
     }
 
     // Ask for the values of the elements
-    for (i = 0; i < *rows; i++)
+    for (int i = 0; i < *rows; i++)
     {
         for (int j = 0; j < *cols; j++)
         {
@@ -31,12 +31,12 @@ void createArray(int **&array, int *cols, int *rows)
 
 void showArray(int **array, int *cols, int *rows)
 {
-    int i, j;
+    cout << "\nThe array is:\n";
 
-    for (i = 0; i < *rows; i++)
+    for (int i = 0; i < *rows; i++)
     {
         cout << "{";
-        for (j = 0; j < *cols; j++)
+        for (int j = 0; j < *cols; j++)
         {
             cout << " " << array[i][j] << " ";
         }
